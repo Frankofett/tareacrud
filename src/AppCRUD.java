@@ -29,7 +29,6 @@ public class AppCRUD {
                         System.out.print("Precio: ");
                         double precio = Double.parseDouble(scanner.nextLine());
                         
-                        // Creamos el objeto y lo pasamos al gestor
                         Producto nuevo = new Producto(nombre, precio);
                         gestor.registrar(nuevo);
                         break;
@@ -54,7 +53,6 @@ public class AppCRUD {
                         System.out.print("Nuevo precio: ");
                         double nuevoPrecio = Double.parseDouble(scanner.nextLine());
 
-                        // Creamos el objeto con los datos actualizados y el ID correspondiente
                         Producto actualizado = new Producto(idMod, nuevoNombre, nuevoPrecio);
                         if (gestor.actualizar(actualizado)) {
                             System.out.println("Producto actualizado correctamente.");
